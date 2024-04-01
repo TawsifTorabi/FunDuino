@@ -11,7 +11,9 @@ void setup() {
 }
 
 void loop() {
-  if (digitalRead(irSensorPin) == HIGH) {  // Check if IR sensor pin is HIGH
+  // Check if IR sensor pin is HIGH (For Sensors with Active Low state, check if your sensor works. 
+  //If doesn't, change the HIGH to LOW)
+  if (digitalRead(irSensorPin) == HIGH) {  
     Serial.println("done");  // Send "done" through serial
     delay(100); // Optional delay to prevent multiple rapid readings
   } else {
